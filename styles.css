@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9; /* Fallback background color */
+  height: auto; /* Allow body to grow with content */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  overflow-y: auto; /* Enable vertical scrolling */
+
+  /* Background Image Styling */
+  background-image: url('background.png'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Fixes the background image so it doesn't scroll */
+}
+
+/* Opening Section */
+.opening {
+  position: relative; /* Allows proper alignment of content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adds spacing between elements */
+  width: 100%;
+  max-width: 430px; /* Limits width for better mobile responsiveness */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Adds padding for spacing */
+  box-sizing: border-box;
+
+  /* Optional: Add a semi-transparent overlay for better readability */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+.invite-text {
+  max-width: 100%; /* Ensures images don't overflow on smaller screens */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image fits within its container */
+}
+
+.appointment-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.appointment-img {
+  max-width: 100%; /* Ensures the button image fits within the container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Images Section */
+.images {
+  width: 100%;
+  max-width: 430px; /* Matches the opening section width */
+  margin: 20px auto; /* Adds spacing above and below */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gallery-image {
+  width: 100%; /* Ensures the image spans the full width of the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Map Section */
+.map {
+  width: 100%;
+  max-width: 430px; /* Matches the opening section width */
+  margin: 20px auto; /* Adds spacing above and below */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.map-image {
+  width: 100%; /* Ensures the map spans the full width of the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  object-fit: cover; /* Ensures the map covers the container */
+}
+
+/* Footer Buttons */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 430px;
+  background-color: transparent;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around; /* Evenly spaces buttons */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+
+
+/* Appointment Button */
+.appointment-btn {
+  padding: 5px; /* Add minimal padding around the button */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.appointment-img {
+  max-width: 100%; /* Ensures the image fits within the button */
+  height: auto; /* Maintains aspect ratio */
+  padding: 5%;
+}
+
+/* Footer Buttons */
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+  padding: 8px; /* Minimal padding for better sizing */
+  font-size: 0.8rem; /* Smaller font size for text */
+  color: #333;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn i {
+  font-size: 1.2rem; /* Adjust icon size to fit the button */
+  color: #cca432; /* Icon color */
+}
+
+.action-btn:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+.button {
+  width: 300px;
+  border: none;
+  img {
+    width: 300px;
+  }
+}
+.welcome_text {
+  img {
+    width: 430px;
+  }
+}
+.qr {
+  width: 100%;
+  height: auto;
+  padding: 0 15% 15%;
+}
+.map {
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Gallery Styling */
+.gallery {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between images in the same row */
+  margin-bottom: 20px; /* Space between rows */
+}
+
+.large-image {
+  width: 100%; /* Full width of the row */
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.large-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.small-image {
+  width: calc(50% - 5px); /* Two images per row with spacing */
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.small-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox.hidden {
+  display: none; /* Hides the lightbox */
+}
+
+#lightbox-image {
+  max-width: 90%; /* Ensures the image fits within the viewport */
+  max-height: 80%; /* Prevents the image from overflowing vertically */
+  border-radius: 10px;
+  object-fit: contain; /* Ensures the image scales proportionally */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  transform: scale(1.05);
+}
